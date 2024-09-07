@@ -1,4 +1,4 @@
-<?php
+<?php 
 session_start();
 ?>
 <!doctype html>
@@ -31,7 +31,7 @@ session_start();
                     <a class="nav-link" aria-current="page" href="index.php"><b>Home</b></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#"><b>send money</b></a>
+                    <a class="nav-link active" href="/"><b>send money</b></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="customers.php"><b>users</b></a>
@@ -46,7 +46,8 @@ session_start();
 
       <div class="container">
           <div class="mt-4 p-5 bg-light  rounded">
-              <center><h2>Welcome To CMR Bank</h2></center>
+             <h2 class="text-center">Welcome To CMR Bank</h2>
+             <!-- here the form start of transaction -->
               <form method="post" action="postform.php" class="my-5" >
                   <div class="row mb-3">
                     <label for="inputPassword3" class="col-sm-2 offset-sm-2 col-form-label">From :</label>
@@ -55,17 +56,15 @@ session_start();
                       <option selected disabled value="">Money Transfer From User...</option>
                       <?php
                           $con = mysqli_connect("localhost", "root", "", "banking") or die(mysqli_errno($con));
-                          $query = "select id,name,email,balance from customers";
+                          $query = "SELECT `name` FROM `customers`";
                           $result = mysqli_query($con, $query) or die(mysqli_error($con));
-                          $n = mysqli_num_rows($result);
-                            for($i =0;$i<$n;$i++)
-                            {
 
-                                $row = mysqli_fetch_array($result);
-                                ?>
-                            <option><?php echo $row[1] ?></option>
-                            <?php  }
-                            ?>
+                          while( $row = mysqli_fetch_assoc($result)){
+                            echo '<option>'.$row['name'].'</option>';
+                          }
+                          ?>
+
+
                     </select>
                     </div>
                   </div>
@@ -76,33 +75,27 @@ session_start();
                             <option selected disabled value="">Money Transfer To User..</option>
                       <?php
                           $con = mysqli_connect("localhost", "root", "", "banking") or die(mysqli_errno($con));
-                          $query = "select id,name,email,balance from customers";
+                          $query = "select name from customers";
                           $result = mysqli_query($con, $query) or die(mysqli_error($con));
                           $n = mysqli_num_rows($result);
                             for($i =0;$i<$n;$i++)
                             {
                                 $row = mysqli_fetch_array($result);
                                 ?>
-                            <option><?php echo $row[1] ?></option>
+                            <option><?php echo $row[0] ?></option>
                             <?php  }
                             ?>
                     </select>
                     </div>
-                  </div>
+                  </div >
                   <div class="row mb-3">
                     <label for="Amount" class="col-sm-2 offset-sm-2 col-form-label">Amount :</label>
                     <div class="col-sm-6">
                         <input type="number" class="form-control" name="amount" required="">
                     </div>
                   </div>
-
-                  <center><button type="text/css" class="btn btn-primary">Transfer</button></center>
+                  <center> <button type="text/css" class="btn btn-primary" >Transfer</button></center>
                 </form>
-
-
-
-
-
               </div>
           </div>
 
