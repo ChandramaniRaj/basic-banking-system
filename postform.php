@@ -26,6 +26,3 @@
             echo '<script> if(confirm("Not Enough Money to transfer")) { window.location.assign("index.php"); } </script>';
             
         }
-        
-  
-
