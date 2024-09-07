@@ -1,6 +1,7 @@
 <?php
 session_start();
 ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -28,7 +29,7 @@ session_start();
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"><b>Home</b></a>
+            <a class="nav-link active" aria-current="page" href="/"><b>Home</b></a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="transaction.php"><b>Send Money</b></a>
@@ -45,18 +46,18 @@ session_start();
 </nav>
 
       <div class="mt-4 p-5 bg-light  rounded">
-          <center><h2 class="mt-4 mb-5">WELCOME TO CMR Bank</h2></center>
+          <h2 class="text-center mt-4 mb-5">WELCOME TO CMR Bank</h2>
         <div class="container">
             <div class="row">
                 <div class="col d-flex justify-content-center">
-                    <a href="transaction.php"><img src="https://jantapaymentservices.com/Home/images/money-transfer-logo.png" class="rounded float-start  " height="200" width="200"></a>
+                    <a href="transaction.php"><img src="img/customers list.png" class="rounded float-start" height="240" width="400"></a>
 
                 </div>
                 <div class="col d-flex justify-content-center">
-                    <a href="customers.php"><img src="https://www.freeiconspng.com/uploads/user-add-icon---shine-set-add-new-user-add-user-30.png" class="rounded float-start " height="200" width="200"></a>
+                    <a href="customers.php"><img src="img/transaction.jpg" class="rounded float-start" height="240" width="350"></a>
                 </div>
                 <div class="col d-flex justify-content-center">
-                    <a href="history.php"><img src="https://cdn3.vectorstock.com/i/1000x1000/11/07/history-icon-vector-22881107.jpg" class="rounded float-start " height="200" width="200"></a>
+                    <a href="history.php"><img src="https://cdn3.vectorstock.com/i/1000x1000/11/07/history-icon-vector-22881107.jpg" class="rounded float-start " height="240" width="260"></a>
                 </div>
             </div>
             <div class="row justify-content-center">
