@@ -39,7 +39,7 @@ session_start();
                     <a class="nav-link" href="transaction.php"><b>send Money</b></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#"><b>Users</b></a>
+                    <a class="nav-link active" href="/"><b>Users</b></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="history.php"><b>History</b></a>
@@ -48,12 +48,12 @@ session_start();
             </div>
         </div>
     </nav>
-  <center><h2>Customers</h2></center>
+  <h2 class="text-center">Customers</h2>
   <div class="container">
         <table class="table table-hover">
           <thead>
             <tr>
-              <th scope="col">#</th>
+              <th scope="col">S.NO.</th>
               <th scope="col">Name</th>
               <th scope="col">Balance</th>
             </tr>
@@ -71,7 +71,7 @@ session_start();
               <tr>
               <th scope="row"><?php echo $row[0]; ?></th>
               <td><?php echo $row[1]; ?></td>
-              <td><?php echo $row[3]; ?></td>
+              <td><?php echo $row[3].".00 cr"; ?></td>
 
             </tr>
             <?php }
