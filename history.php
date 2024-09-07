@@ -43,7 +43,7 @@ session_start();
         </div>
       </div>
     </nav>
-  <center><b><h2 class="m-3">Transaction History</h2></b></center>
+  <b><h2 class="text-center m-3">Transaction History</h2></b>
 
   <div class="container">
         <table class="table table-hover">
